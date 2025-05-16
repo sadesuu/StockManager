@@ -12,8 +12,7 @@ import java.math.BigDecimal;
 @Table(name = "detalles_pedido")
 public class DetallesPedido {
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "detalles_pedido_id_gen")
-    @SequenceGenerator(name = "detalles_pedido_id_gen", sequenceName = "detalles_pedido_id_detalle_pedido_seq", allocationSize = 1)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_detalle_pedido", nullable = false)
     private Integer id;
 

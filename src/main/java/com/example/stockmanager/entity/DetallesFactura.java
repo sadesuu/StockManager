@@ -1,8 +1,6 @@
 package com.example.stockmanager.entity;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -11,8 +9,10 @@ import java.math.BigDecimal;
 @Getter
 @Setter
 @Entity
-public class detalles_factura {
+@Table(name = "detalles_factura")
+public class DetallesFactura {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_detalle", nullable = false)
     private Integer id;
 

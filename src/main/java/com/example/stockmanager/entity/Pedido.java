@@ -12,8 +12,7 @@ import java.time.LocalDate;
 @Table(name = "pedidos")
 public class Pedido {
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "pedidos_id_gen")
-    @SequenceGenerator(name = "pedidos_id_gen", sequenceName = "pedidos_id_pedido_seq", allocationSize = 1)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_pedido", nullable = false)
     private Integer id;
 
